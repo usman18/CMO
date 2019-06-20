@@ -1,83 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
-    <android.support.design.widget.AppBarLayout
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        >
-
-        <android.support.v7.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:title="CMO"
-            android:id="@+id/toolbar"
-            app:titleTextColor="#FFFFFF"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
-            />
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:background="@color/colorPrimary"
-            app:tabTextColor="#b3ffffff"
-            app:tabIndicatorColor="#ffffff"
-            app:tabIndicatorHeight="3dp"
-            app:tabSelectedTextColor="#FFFFFF"
-            android:layout_height="wrap_content">
-
-            <android.support.design.widget.TabItem
+        android:layout_height="match_parent">
+        
+        
+        <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                
+                <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        app:layout_scrollFlags="scroll|enterAlways|snap"
+                        app:title="CMO"
+                        app:titleTextColor="#FFFFFF" />
+                
+                <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        app:tabIndicatorColor="#ffffff"
+                        app:tabIndicatorHeight="3dp"
+                        app:tabSelectedTextColor="#FFFFFF"
+                        app:tabTextColor="#b3ffffff">
+                        
+                        <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Posts" />
+                        
+                        <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Members" />
+                
+                
+                </android.support.design.widget.TabLayout>
+        
+        </android.support.design.widget.AppBarLayout>
+        
+        <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        
+        
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/add_posts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Posts" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:background="#f25a3f"
+                app:elevation="12dp"
+                android:visibility="gone"
+                app:backgroundTint="#f25a3f"
+                app:srcCompat="@mipmap/ic_add_white_36dp" />
+        
+        
+        <TextView
+                android:id="@+id/auth_msg"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Members" />
-
-
-
-        </android.support.design.widget.TabLayout>
-
-    </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        />
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_posts"
-        android:layout_margin="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        app:backgroundTint="#f25a3f"
-        android:background="#f25a3f"
-        android:clickable="true"
-        android:elevation="12dp"
-        app:srcCompat="@mipmap/ic_add_white_36dp" />
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:text="@string/auth_message"
-        android:id="@+id/auth_msg"
-        android:visibility="invisible"
-        android:layout_gravity="center"
-        />
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:text="@string/auth_message"
+                android:visibility="invisible" />
 
 </android.support.design.widget.CoordinatorLayout>
 

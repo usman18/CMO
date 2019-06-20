@@ -61,14 +61,12 @@ public class MainScreenActivity extends AppCompatActivity {
                     if (!user.isLegit()) {
                         tabLayout.setVisibility(View.GONE);
                         msg.setVisibility(View.VISIBLE);
-                        add_post.setVisibility(View.INVISIBLE);
                         viewPager.setAdapter(null);
                     } else {
                         subscribeToPosts();
                         viewPager.setAdapter(viewPagerAdapter);
                         tabLayout.setVisibility(View.VISIBLE);
                         msg.setVisibility(View.INVISIBLE);
-                        add_post.setVisibility(View.VISIBLE);
                         initializeToken();
                     }
 
